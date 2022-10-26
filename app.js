@@ -5,14 +5,15 @@ const PORT = 3000
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 require('./config/mongoose')
-
+// 引用路由器
+const routes = require('./routes')
 //樣板引擎
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 
 app.use(bodyParser.urlencoded({ extended: true }))
-
+app.use(routes)
 
 // 啟動伺服器
 app.listen(PORT, () => {
