@@ -21,7 +21,7 @@ export MONGODB_URI="Your MongoDB connection URL"
 ```
 npm run seed
 ```
- 6.Then enter foloowing code
+ 6. Then enter foloowing code
 ```
 npm run start
 ```
